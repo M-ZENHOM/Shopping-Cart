@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f0edee;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  position: relative;
+  height: 8vh;
+  background-color: #545775;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  color: #fff;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  header h2 {
+    font-size: 18px;
+  }
+}
+header h2 {
+  letter-spacing: 1.2px;
+}
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+header ul li {
+  margin-right: 15px;
+  font-size: 20px;
+}
+header ul li a {
+  color: #fff;
+}
+header ul li i {
+  cursor: pointer;
+}
+header ul li .badge {
+  display: none;
+  margin-top: -30px;
+  margin-left: 15px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  text-align: center;
+  line-height: 20px;
+  font-size: 14px;
+}
+header ul li .cart-items {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 750px;
+  max-height: 100vh;
+  background-color: #545775;
+  z-index: 55;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+@media (max-width: 767px) {
+  header ul li .cart-items {
+    top: 53px;
+    width: 375px;
+  }
+}
+header ul li .cart-items .cart-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+header ul li .cart-items .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+  background-color: #fff;
+  color: #000;
+}
+header ul li .cart-items .item .item-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+header ul li .cart-items .item .item-info img {
+  width: 60px;
+  height: 60px;
+}
+header ul li .cart-items .item .units {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+header ul li .cart-items .item .units .btn {
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 20px;
+  cursor: pointer;
+}
+header ul li .cart-items .sub-total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  margin: 15px 0;
+  background-color: #fff;
+  padding: 10px;
+  color: #545775;
+}
+header ul li .cart-items .checkout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  background-color: green;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+header ul li .cart-items .closeBtn {
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  line-height: 20px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  color: #fff;
+}
+header ul li .cart-items.open {
+  display: block;
+}
+
+.cards-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.cards-container .card-box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  width: 300px;
+  background-color: #545775;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  overflow: hidden;
+}
+.cards-container .card-box:hover .card-btns {
+  bottom: 0;
+}
+.cards-container .card-box h2 {
+  margin: 15px 0;
+}
+.cards-container .card-box p {
+  margin-bottom: 20px;
+}
+.cards-container .card-box .card-btns {
+  position: absolute;
+  bottom: -50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  background-color: #6a5d7b;
+  width: 300px;
+  height: 10%;
+  padding: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.cards-container .card-box .card-btns button {
+  margin: 0 15px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.cards-container .card-box .card-btns button:hover {
+  background-color: #545775;
+  color: #fff;
+}
+.cards-container .card-box .card-btns i {
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.cards-container .card-box .card-btns i:hover {
+  color: red;
+}
+/*# sourceMappingURL=style.css.map */

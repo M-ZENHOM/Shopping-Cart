@@ -1,0 +1,177 @@
+@use "config/variables" as *;
+@use "components/layout";
+@use "components/mixins" as *;
+
+header {
+  position: relative;
+  height: 8vh;
+  background-color: $header-color;
+  @include flexCentering(space-around, center, row);
+  color: $w-color;
+  text-transform: uppercase;
+  @media (max-width: 767px) {
+    & h2 {
+      font-size: 18px;
+    }
+  }
+  & h2 {
+    letter-spacing: 1.2px;
+  }
+  & ul {
+    @include flexCentering(center, center, row);
+    & li {
+      margin-right: 15px;
+      font-size: 20px;
+      & a {
+        color: $w-color;
+      }
+      i {
+        cursor: pointer;
+      }
+      & .badge {
+        display: none;
+        margin-top: -30px;
+        margin-left: 15px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: red;
+        text-align: center;
+        line-height: 20px;
+        font-size: 14px;
+      }
+      & .cart-items {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 750px;
+        max-height: 100vh;
+        background-color: $header-color;
+        z-index: 55;
+        transition: $main-trans;
+        @media (max-width: 767px) {
+          & {
+            top: 53px;
+            width: 375px;
+          }
+        }
+        & .cart-header {
+          @include flexCentering(space-around, center, row);
+        }
+        & .item {
+          @include flexCentering(space-around, center, row);
+          margin-top: 15px;
+          background-color: $w-color;
+          color: #000;
+          & .item-info {
+            @include flexCentering(center, center, row);
+            & img {
+              width: 60px;
+              height: 60px;
+            }
+          }
+          & .units {
+            @include flexCentering(center, center, row);
+            & .btn {
+              width: 20px;
+              height: 20px;
+              background-color: #000;
+              color: $w-color;
+              text-align: center;
+              border-radius: 50%;
+              line-height: 20px;
+              cursor: pointer;
+            }
+          }
+        }
+        .sub-total {
+          @include flexCentering(center, center, row);
+          margin: 15px 0;
+          background-color: #fff;
+          padding: 10px;
+          color: $header-color;
+        }
+        .checkout {
+          @include flexCentering(center, center, row);
+          background-color: green;
+          padding: 10px;
+          color: $w-color;
+          cursor: pointer;
+        }
+        .closeBtn {
+          background-color: red;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          line-height: 20px;
+          text-align: center;
+          font-size: 14px;
+          cursor: pointer;
+          color: $w-color;
+        }
+        &.open {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.cards-container {
+  @include flexCentering(center, center, row);
+  flex-wrap: wrap;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  .card-box {
+    position: relative;
+    @include flexCentering(center, center, column);
+    width: 300px;
+    background-color: $header-color;
+    color: $w-color;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+    &:hover .card-btns {
+      bottom: 0;
+    }
+    h2 {
+      margin: 15px 0;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+    .card-btns {
+      position: absolute;
+      bottom: -50px;
+      @include flexCentering(center, center, row);
+      background-color: #6a5d7b;
+      width: 300px;
+      height: 10%;
+      padding: 10px;
+      transition: $main-trans;
+      button {
+        margin: 0 15px;
+        padding: 10px 15px;
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        transition: $main-trans;
+        &:hover {
+          background-color: $header-color;
+          color: $w-color;
+        }
+      }
+      i {
+        font-size: 20px;
+        cursor: pointer;
+        transition: $main-trans;
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+}
